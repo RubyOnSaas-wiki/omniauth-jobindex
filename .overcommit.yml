@@ -1,0 +1,59 @@
+gemfile: ".overgems.rb"
+
+concurrency: '%{processors}'
+
+PreCommit:
+  ALL:
+    problem_on_unmodified_line: warn
+
+  AuthorName:
+    enabled: false
+
+  BerksfileCheck:
+    enabled: true
+
+  BundleCheck:
+    enabled: true
+
+  HardTabs:
+    enabled: true
+    exclude:
+      - vendor/assets/**/*
+
+  JsonSyntax:
+    enabled: true
+
+  LocalPathsInGemfile:
+    enabled: true
+
+  MergeConflicts:
+    enabled: true
+
+  PryBinding:
+    enabled: true
+
+  RuboCop: &rubocop
+    enabled: true
+
+  # overcommit used 'Rubocop' hook name before 0.25.0 version
+  Rubocop:
+    <<: *rubocop
+
+  ShellCheck:
+    enabled: true
+
+  TrailingWhitespace:
+    enabled: true
+    exclude:
+      - vendor/assets/**/*
+      - test/fixtures/vcr_cassettes/**/*.yml
+      - '**/*.md'
+
+  TravisLint:
+    enabled: true
+
+  XmlLint:
+    enabled: true
+
+  YamlSyntax:
+    enabled: true
