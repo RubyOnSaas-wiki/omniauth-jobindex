@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['maciej@litwiniuk.net']
 
   spec.summary       = 'Omniauth Jobindex.dk Strategy'
-  spec.homepage      = 'https://github.com/prograils/omniauth-jobindex'
+  spec.homepage      = 'https://github.com/RubyOnSaas-wiki/omniauth-jobindex'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
